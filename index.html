@@ -4,36 +4,39 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>لـ نن عيني💗😍</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
 <style>
+
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
-    font-family:'Cairo',sans-serif;
-    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    overflow:hidden;
-    position:relative;
+font-family:'Cairo',sans-serif;
+background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+position:relative;
 }
 
 .bg-hearts{
-    position:absolute;
-    width:100%;
-    height:100%;
-    overflow:hidden;
-    z-index:-1;
+position:absolute;
+width:100%;
+height:100%;
+overflow:hidden;
+z-index:-1;
 }
 
 .heart{
-    position:absolute;
-    width:20px;
-    height:20px;
-    background:rgba(255,255,255,0.6);
-    transform:rotate(45deg);
-    animation:float 6s linear infinite;
+position:absolute;
+width:20px;
+height:20px;
+background:rgba(255,255,255,0.6);
+transform:rotate(45deg);
+animation:float 6s linear infinite;
 }
 
 .heart::before,.heart::after{
@@ -53,8 +56,6 @@ border-radius:50%;
 50%{opacity:.8;}
 100%{transform:translateY(-50px) rotate(45deg);opacity:0;}
 }
-
-/* نجوم العيد */
 
 .bg-eid{
 position:absolute;
@@ -170,10 +171,8 @@ font-weight:bold;
 <body>
 
 <div class="bg-hearts" id="heartsContainer"></div>
-
 <div class="bg-eid" id="eidDecor"></div>
 
-<!-- سؤال البداية -->
 <div class="card" id="quizCard">
 <h1>مفيش دخول غير لما تجاوبي صح</h1>
 <div class="message-box"><span id="quizMessage"></span></div>
@@ -182,25 +181,21 @@ font-weight:bold;
 <button class="btn" onclick="checkAnswer()">صح؟</button>
 </div>
 
-<!-- رسالة الانتظار -->
 <div class="card hidden" id="waitingCard">
 <h1>الصبر حلو 😍</h1>
 <div class="message-box"><span id="waitingMessage"></span></div>
 </div>
 
-<!-- الرسالة الرئيسية -->
 <div class="card hidden" id="mainCard">
 <h1>لـ جني مراتي🥹 💗</h1>
 <div class="message-box" id="mainMessage"></div>
 </div>
 
-<!-- العداد -->
 <div class="card hidden" id="countdownCard">
 <h1> 😍اصبري لسا مخلصناش </h1>
 <div class="countdown-box" id="countdownDisplay">10</div>
 </div>
 
-<!-- رسالة العيد -->
 <div class="eid-card hidden" id="eidCard">
 <h1 class="eid-title">عيد فطر سعيد 🌙</h1>
 <div class="eid-message">
@@ -215,9 +210,34 @@ const correctAnswer="جني صبري";
 const quizText="أيه أكتر حاجة ميدو بيحبها؟";
 const waitingText=" صح طبعا مزتي 😍";
 
-          const mainText="      انا يمكن مبعرفش اعبر بالكلام دايماً بس الحقيقة اني بحبك بجد انتي بسببك غيرتيلي حياتي انتي غيرتي فيا حجات كتير اوي مش كلام بس والله انتي غيرتيني كتير اوي وبشكرك علي ده فعلا انتي مش بس حبيبتي انتي  روحي ومراتي وقلبي وأقرب شخص لقلبي أنا بجد مبسوط إنك في حياتي ومش عايز اخسرك لأي سبب نفسي دايماً اشوفك مبسوطة علشان فرحتك بالدنيا كلها  ويكفيني بس اني اكون سبب في ضحكتك او فرحتك 
-عارف اني بقول كلام كتير اوي بتخليكي تكرهيني وبتخليكي تزعلي مني بس انا والله ما بيبقا قصدي زعلك ولا ببقا عايزك تزعلي انا والله عايزك تبقي فرحانه العمر كلو ويارب تسامحيني من قلبك عل اي كلمه قلتها وزعلتك او اتريقت عليكي وزعلتك بسببها 
-بحبك يا جوجو🥹 💗";
+const mainText=`انا يمكن مبعرفش اعبر بالكلام دايماً بس الحقيقة اني بحبك بجد
+انتي بسببك غيرتيلي حياتي
+انتي غيرتي فيا حجات كتير اوي مش كلام بس والله
+انتي غيرتيني كتير اوي وبشكرك علي ده فعلا
+
+انتي مش بس حبيبتي
+انتي روحي ومراتي وقلبي وأقرب شخص لقلبي
+
+أنا بجد مبسوط إنك في حياتي
+ومش عايز اخسرك لأي سبب
+
+نفسي دايماً اشوفك مبسوطة
+علشان فرحتك بالدنيا كلها
+
+ويكفيني بس اني اكون سبب في ضحكتك او فرحتك
+
+عارف اني بقول كلام كتير اوي
+بتخليكي تكرهيني وبتخليكي تزعلي مني
+
+بس انا والله ما بيبقا قصدي زعلك
+ولا ببقا عايزك تزعلي
+
+انا والله عايزك تبقي فرحانه العمر كلو
+
+ويارب تسامحيني من قلبك
+عل اي كلمه قلتها وزعلتك
+
+بحبك يا جوجو🥹 💗`;
 
 const quizMessage=document.getElementById("quizMessage");
 const waitingMessage=document.getElementById("waitingMessage");
@@ -234,31 +254,23 @@ const body=document.body;
 
 const eidDecor=document.getElementById("eidDecor");
 
-/* كتابة حرف حرف */
-
 function typeWriter(element,text,callback){
 let i=0;
 element.textContent="";
-
 function addChar(){
 if(i<text.length){
 element.textContent+=text[i];
 i++;
 setTimeout(addChar,15);
-}
-else if(callback){
+}else if(callback){
 callback();
-}
-}
+}}
 addChar();
 }
 
-/* القلوب */
-
 function createHearts(){
 const container=document.getElementById("heartsContainer");
-
-for(let j=0;j<10;j++){   // قللنا القلوب
+for(let j=0;j<10;j++){
 const heart=document.createElement("div");
 heart.className="heart";
 heart.style.left=Math.random()*100+"vw";
@@ -267,43 +279,26 @@ container.appendChild(heart);
 }
 }
 
-/* نجوم العيد */
-
 function createStars(){
-
 eidDecor.style.display="block";
-
 for(let i=0;i<20;i++){
-
 let star=document.createElement("div");
-
 star.className="star";
 star.innerHTML="⭐";
-
 star.style.left=Math.random()*100+"vw";
 star.style.top=Math.random()*100+"vh";
-
 eidDecor.appendChild(star);
-
 }
-
 let moon=document.createElement("div");
-
 moon.className="moon";
 moon.innerHTML="🌙";
-
 eidDecor.appendChild(moon);
-
 }
-
-/* البداية */
 
 window.onload=function(){
 typeWriter(quizMessage,quizText);
 createHearts();
 }
-
-/* التحقق */
 
 function checkAnswer(){
 
@@ -312,7 +307,6 @@ const userAnswer=answerInput.value.trim();
 if(userAnswer===correctAnswer){
 
 quizCard.classList.add('hidden');
-
 waitingCard.classList.remove('hidden');
 
 typeWriter(waitingMessage,waitingText,()=>{
@@ -320,7 +314,6 @@ typeWriter(waitingMessage,waitingText,()=>{
 setTimeout(()=>{
 
 waitingCard.classList.add('hidden');
-
 mainCard.classList.remove('hidden');
 
 typeWriter(mainMessage,mainText,startCountdown);
@@ -338,7 +331,6 @@ let wrongMessages=["غلط!!!","اياكي تكلميني تاني 😒","بكر
 let wrongMessage=wrongMessages[Math.floor(Math.random()*wrongMessages.length)];
 
 quizCard.classList.add('hidden');
-
 waitingCard.classList.remove('hidden');
 
 typeWriter(waitingMessage,wrongMessage,()=>{
@@ -346,9 +338,7 @@ typeWriter(waitingMessage,wrongMessage,()=>{
 setTimeout(()=>{
 
 waitingCard.classList.add('hidden');
-
 quizCard.classList.remove('hidden');
-
 answerInput.value="";
 
 },1000);
@@ -359,50 +349,38 @@ answerInput.value="";
 
 }
 
-/* العداد */
-
 function startCountdown(){
 
 let count=10;
 
 countdownCard.classList.remove('hidden');
-
 countdownDisplay.textContent=count;
 
 const interval=setInterval(()=>{
 
 count--;
-
 countdownDisplay.textContent=count;
 
 if(count<=0){
-
 clearInterval(interval);
-
 showEid();
-
 }
 
 },1000);
 
 }
 
-/* شاشة العيد */
-
 function showEid(){
 
 countdownCard.classList.add('hidden');
-
 mainCard.classList.add('hidden');
-
 eidCard.classList.remove('hidden');
-
 body.classList.add('eid-background');
-
 createStars();
 
 }
 
 </script>
+
 </body>
-</html>
+                   </html>
