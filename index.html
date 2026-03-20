@@ -261,7 +261,7 @@ function addChar(){
 if(i<text.length){
 element.textContent+=text[i];
 i++;
-setTimeout(addChar,15);
+setTimeout(addChar,50);
 }else if(callback){
 callback();
 }}
@@ -351,7 +351,7 @@ answerInput.value="";
 
 function startCountdown(){
 
-let count=10;
+let count=15;
 
 countdownCard.classList.remove('hidden');
 countdownDisplay.textContent=count;
